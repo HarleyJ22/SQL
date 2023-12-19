@@ -16,3 +16,8 @@ WHERE
 GRANT SELECT, UPDATE ON Books TO 'Martin'@'localhost'
 
 REVOKE UPDATE ON Books FROM 'Martin'@'localhost'
+
+BEGIN TRANSACTION
+DELETE FROM Books WHERE book_id = 101;
+SAVEPOINT SP1;
+COMMIT
