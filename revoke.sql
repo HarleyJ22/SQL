@@ -14,3 +14,5 @@ WHERE
     title = 'War and Peace';
 
 GRANT SELECT, UPDATE ON Books TO 'Martin'@'localhost'
+
+REVOKE UPDATE ON Books FROM 'Martin'@'localhost'
